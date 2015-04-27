@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular - directives</title>
+    <script src="3rd-party/angular.min.js" ></script>
+</head>
+<body>
+<div ng-app="" ng-init="firstName='Jhon'">
+    <p>The name is
+        <span ng-bind="firstName"></span>
+    </p>
+</div>
+<div data-ng-app="" data-ng-init="firstName='John2'">
+    <p>
+        The name is <span data-ng-bind="firstName"></span>
+    </p>
+</div>
+
+</body>
+</html>

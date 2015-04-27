@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular - Filters</title>
+    <script src="3rd-party/angular.min.js" ></script>
+</head>
+<body>
+<div ng-app="myApp">
+    <div ng-controller="personCtrl">
+        <p>The name is {{ lastName | uppercase }}</p>
+    </div>
+    <div ng-controller="namesCtrl">
+        <ul>
+           <li ng-repeat="x in names | orderBy:'country' | filter:'l'">
+               {{ (x.name | uppercase) + ' ,' + x.country}}
+           </li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="scripts/controllers.js"></script>
+</body>
+</html>
